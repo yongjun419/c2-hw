@@ -1,0 +1,24 @@
+
+노트패드를 생성해서
+두 함수를 사용해서 합을 구하는 코드를 짭니다
+
+두 파일을 
+cl/c test.c add.c
+link test add
+test
+을 사용해서 나누고
+
+밑에 코드를 사용해서 라이브러리를 생성합니다.
+test.c add.c sub.c
+lib /OUT:mymath.lib add.obj sub.obj
+link test my.lib
+
+
+#include <stdio.h>
+#include "mymath.h"
+
+int main() {
+    int result = add(22, 33);
+    printf("22 + 33 = %d\n", result);
+    return 0;
+}
